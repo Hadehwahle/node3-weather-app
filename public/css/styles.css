@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-content {
+  flex: 1;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem; */
+}
+
+.weather-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  margin: 2rem auto;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.weather-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.location-input {
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.location-input:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.submit-btn {
+  padding: 1rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.weather-result {
+  margin: 2rem 0;
+  min-height: 100px;
+}
+
+.message {
+  color: #666;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.weather-data {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.weather-data p {
+  margin: 0.75rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.location {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 1.3rem !important;
+}
+
+.forecast {
+  color: #555;
+}
+
+footer {
+  padding-block: 1.5rem;
+  border-top: 2px solid #e0e0e0;
+  color: #888;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #888;
+  font-weight: 600;
+}
+.portrait {
+  width: 200px;
+}
+/* Responsive design */
+@media (max-width: 600px) {
+  .weather-container {
+    padding: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .location-input,
+  .submit-btn {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+}

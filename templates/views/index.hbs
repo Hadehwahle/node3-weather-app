@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Application</title>
+    <link rel="shortcut icon" href="/images/cloud.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    {{>header}}
+    
+    <main class="main-content">
+      <div class="weather-container">
+        <h1>Get Weather Information</h1>
+        <p class="subtitle">Enter a location to get real-time weather updates</p>
+        
+        <form class="weather-form">
+          <input 
+            type="text"
+            class="location-input" 
+            placeholder="Enter location (e.g., London, New York)" 
+          />
+          <button type="submit" class="submit-btn">Get Weather</button>
+        </form>
+        
+        <p id="location" class="location"></p>
+        <p id="forecast" class="forecast"></p>
+      </div>
+    </main>
+
+    {{>footer}}
+    <script src="/js/app.js"></script>
+  </body>
+</html>
